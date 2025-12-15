@@ -92,7 +92,7 @@ A real-time speech-to-text transcription application built with OpenAI's Whisper
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/BadassAman4014/Real-time-Bilingual-GenAI-Speech-Transcript-Generator.git
    cd "Multilingual Trancriber"
    ```
 
