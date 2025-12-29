@@ -1,0 +1,28 @@
+# Model
+model_name: "openai/whisper-small"
+
+# Dataset
+train_manifest: "data/manifests/train.json"
+sample_rate: 16000
+max_audio_length_sec: 30   # optional, for truncating long audios
+
+# Training parameters
+batch_size: 4
+gradient_accumulation_steps: 2
+num_train_epochs: 3
+learning_rate: 1e-5
+fp16: true                  # use GPU half-precision if available
+
+# Logging & checkpoints
+output_dir: "checkpoints"
+logging_steps: 50
+save_steps: 500
+evaluation_strategy: "steps"
+
+# Collator / Preprocessing
+padding: "longest"           # for variable-length audio
+truncate_labels: true        # truncate target sequences if too long
+
+# Optional: language/task (multilingual)
+language: null               # null = multilingual
+task: "transcribe"           # "transcribe" or "translate"
